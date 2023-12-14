@@ -84,3 +84,9 @@ table {
   text-align: center;
   border: 2px solid white;
 }
+
+.button{
+  position:absolute;
+  right:0;
+  top :0;
+}

@@ -3,35 +3,38 @@ import React, { useEffect, createContext, useState } from "react";
 // context Object which stores some data and will make it available throughout the project
 const ThemeContext = createContext();
 
-const getTheme = () => {
-  const theme = localStorage.getItem("theme");
-  if (!theme) {
-    // Default theme is taken as dark-theme
-    localStorage.setItem("theme", "dark-theme");
-    return "dark-theme";
-  } else {
-    return theme;
-  }
-};
+
 
 //  **************** useState *****************
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(getTheme);
+  const [theme, setTheme] = useState();
 
   function toggleTheme() {
-    if (theme === "dark-theme") {
-      setTheme("light-theme");
-    } else {
+    if (theme === "light-theme")
+    {
       setTheme("dark-theme");
+      localStorage.setItem("theme", "dark-theme");
+    }
+    else {
+      setTheme("light-theme");
+      localStorage.setItem("theme", "light-theme");
+    }
+  };
+
+  const getTheme = () => {
+    const theme = localStorage.getItem("theme");
+    if (!theme) {
+      // Default theme is taken as dark-theme
+      localStorage.setItem("theme", "dark-theme");
+      setTheme("dark-theme");
+    }
+    else {
+      setTheme(theme)
     }
   };
 
   useEffect(() => {
-    const refreshTheme = () => {
-      localStorage.setItem("theme", theme);
-    };
-
-    refreshTheme();
+    getTheme();
   }, [theme]);
 
   return (
