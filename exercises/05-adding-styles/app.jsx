@@ -2,9 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
-//add the styles here
-const mySuperStyles = {
 
+
+const mySuperStyles = {
+    color: "black",
+    fontSize: "1px",
+    border: "1px solid yellow"
 };
 
 const Badge = props => {
