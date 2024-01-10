@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.navigation-bar{
+  height: 400px;
+  width: 140px;
+}
+
+
+H1 { text-align: center }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'mars-centra-bold' !important;
+}
+
+.text-small {
+  font-size: 10px !important;
+  font-family: 'mars-centra-book' !important;
+}
+.text-large {
+  font-size: 12px !important;
+  font-family: 'mars-centra-book' !important;
+  color: #8a8a8a !important;
+}
+.light-gray {
+  color: #8a8a8a !important;
+}
+.gray {
+  color: #777777 !important;
+}
